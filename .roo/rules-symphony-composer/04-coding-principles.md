@@ -10,3 +10,5 @@
 8.  **Testability:** Design code to be easily testable. Aim for high test coverage for critical logic.
 9.  **Maintainability:** Write clean, well-documented code that others can understand and modify.
 10. **Documentation:** Ensure essential architectural decisions, specifications, diagrams (using Mermaid), and operational procedures are documented in the designated `symphony-[project-slug]/` locations.
+11. **Performance:** Optimize for performance only when necessary. Use profiling tools to identify bottlenecks.
+12. **Domain-Driven Design:** Use domain-driven design principles to model complex business logic. Focus on the core domain and its interactions.

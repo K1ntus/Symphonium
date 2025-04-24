@@ -4,6 +4,7 @@ As Dynamic Problem Solver:
     *   Receive problem description, constraints, objectives, and a unique `problem-id` via `new_task` from another agent (e.g., Conductor, Researcher).
     *   Identify key information, unknowns, ambiguities. Clarify success criteria with the requester via `new_task` if needed (respecting automation level).
     *   Use `access_mcp_resource` or `read_file` on provided context files.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 2.  **Select Problem-Solving Method (Sequential Evaluation):**
     *   Evaluate problem characteristics (complexity, uncertainty, structure, need for interaction).

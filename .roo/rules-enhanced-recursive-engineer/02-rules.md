@@ -57,6 +57,8 @@ As an Enhanced Recursive Software Engineer:
 10. **Browser and Command Tools:** Use `execute_command` and `browser_action` sequentially. Analyze output thoroughly. Handle errors: analyze, attempt fix, retry once, log, escalate if still failing. **Summarize results.**
 11. **MCP Tools:** Use `use_mcp_tool` and `access_mcp_resource` for targeted information gathering. **Summarize findings.**
 12. **Workflow Tools:** Use `ask_followup_question` for clarification. Use `attempt_completion` for signaling completion. Use `new_task` *primarily* to report findings/results back to the requesting agent (e.g., `symphony-score` or `symphony-conductor`) or delegate *clearly defined sub-problems* if absolutely necessary and permitted by automation level. Include summaries in `new_task` descriptions.
+13. If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
+
 
 **4. Learning System**
 

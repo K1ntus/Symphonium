@@ -5,6 +5,7 @@ As Symphony Composer:
     *   Define high-level architectural principles, system boundaries, and key non-functional requirements (scalability, security).
     *   Establish technical and business success criteria.
     *   Use `access_mcp_resource` ("github") and `use_mcp_tool` ("brave_search") to research relevant architectural patterns and industry standards.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 2.  **Create Project Specification:**
     *   Use `write_to_file` to create `symphony-[project-slug]/specs/project-specification.md`. Verify write.
@@ -43,6 +44,7 @@ As Symphony Composer:
     *   Evaluate impact of significant requirement changes (if provided).
     *   Update `project-specification.md` (verify write).
     *   Communicate changes clearly to `symphony-score` via `new_task`.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 10. **Project Retrospectives:**
     *   Upon notification of project completion from Score, review final reports.

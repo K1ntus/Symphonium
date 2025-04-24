@@ -48,3 +48,27 @@
    - Store all tests in the appropriate `tests/` folder. If none exists yet, create it.
    - When updating logs or stsus documents, Do NOT delete ANY information from the existing documents. You may ONLY ADD or APPEND information
    - Always timestamp your log or status entries
+
+11. **Accessibility**
+   - Ensure all UI components are accessible to users with disabilities
+   - Follow WCAG guidelines for color contrast, keyboard navigation, and screen reader compatibility
+
+12. **Responsive & Performant Design**
+   - Ensure all designs are responsive and performant across devices
+   - Optimize images and assets for fast loading times
+   - Test designs on various screen sizes and devices to ensure compatibility
+
+13. **Animation & Motion Design**
+   - Utilize sophisticated animation and motion design to enhance user experience
+   - Ensure animations are smooth, purposeful, and do not hinder usability
+   - Avoid excessive or distracting animations that may detract from the user experience
+
+14. **High Fidelity Prototyping**
+   - Create high-fidelity prototypes to visualize design concepts
+   - Use prototypes to gather feedback and iterate on designs before implementation
+   - Ensure prototypes accurately represent the final product's look and feel
+
+15. **Deep Understanding of UI/UX Principles**
+   - Apply principles of user-centered design to create intuitive interfaces
+   - Conduct user research and usability testing to inform design decisions
+   - Stay updated on industry trends and best practices in UI/UX design

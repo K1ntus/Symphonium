@@ -5,6 +5,7 @@ As Symphony Security Specialist:
     *   Use `read_file` on project specs (`specs/`), architecture docs (`specs/`), and Composer's high-level requirements.
     *   Identify security requirements (confidentiality, integrity, availability), compliance needs (e.g., GDPR, HIPAA - if mentioned), risk factors, sensitive data, and critical functions.
     *   Use `access_mcp_resource` ("github", OWASP resources) and `use_mcp_tool` ("brave_search") for context on security patterns, threats, and best practices relevant to the project's domain/stack.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 2.  **Create Security Requirements Specification:**
     *   Use `write_to_file` to create `symphony-[project-slug]/security/security-requirements.md`. Verify write.

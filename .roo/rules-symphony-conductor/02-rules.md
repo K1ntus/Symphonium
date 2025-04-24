@@ -55,6 +55,8 @@ As Symphony Conductor:
         *   Update task status back to `Assigned` or `In Progress` in the task sheet. Verify update. Log re-assignment in team log.
         *   Track iterations in the task sheet.
 
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
+
 9.  **Manage Dependencies & Next Tasks:**
     *   When a task is `Approved`, review the execution plan (`[goal-id]-execution-plan.md`) and task sheet (`[goal-id]-sheet.md`) to identify the *next* task(s) in the sequence whose dependencies are now met.
     *   Assign the next task(s) following step 5.

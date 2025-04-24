@@ -55,9 +55,11 @@ As Symphony Researcher:
     *   **CRITICAL:** Check automation level in `symphony-core.md`.
     *   Use `new_task` to notify the *requesting agent* that the research (`research-id`) is complete.
     *   Provide the path to the research report (`research/reports/[research-id]/[research-id]-report.md`) and the log file.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 13. **Maintain Research Knowledge Base:**
     *   Organize findings logically within the `knowledge/` directory. Update index file (`research/research-index.md`) if applicable (`append_to_file`).
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 14. **Follow Up (If Requested):**
     *   If asked later about the outcome of implemented recommendations, use `read_file` on relevant logs/reports to provide a summary via `new_task`.

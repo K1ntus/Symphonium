@@ -8,6 +8,7 @@ As Symphony Integrator:
 2.  **Create/Maintain Integration Registry:**
     *   Use `write_to_file` for initial creation or `apply_diff` / careful `write_to_file` (with verification) for updates to `symphony-[project-slug]/integration/integration-registry.md`.
     *   Document each integration point (assign unique Integration-ID) including all required fields (Type, Producer, Consumer, Related Tasks, Status, Spec Doc, Test Plan, Risks, Notes).
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 3.  **Define Integration Specifications:**
     *   For each integration point, use `write_to_file` to create a detailed spec `symphony-[project-slug]/integration/specs/[integration-id]-specification.md`. Verify write.

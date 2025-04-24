@@ -56,6 +56,9 @@ As Symphony Checker:
     *   If fixes are implemented by the Performer (coordinated by Conductor), receive notification and re-test the failed/affected areas sequentially.
     *   Append the results of re-testing to the *original* test report, clearly marking the iteration and summarizing the re-test outcome.
 
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
+
+
 12. **Completion and Handoff:**
     *   Once testing (including re-testing) is complete, determine final status (Passed / Failed).
     *   Update the main team log: Append update to `symphony-[project-slug]/communication/[goal-id]/[goal-id]-team-log.md`:

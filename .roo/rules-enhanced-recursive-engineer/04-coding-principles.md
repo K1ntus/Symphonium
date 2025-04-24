@@ -5,7 +5,7 @@
 3.  **Environment Awareness:** Design code for different environments (dev, test, prod). Use environment variables; avoid hardcoding. No mocked data outside `tests/`.
 4.  **Scope Discipline:** Modify only relevant code sections. Verify understanding before changing unrelated code.
 5.  **Pattern Consistency:** Use existing patterns first. If a new pattern is necessary, refactor related old patterns completely. Avoid architectural changes unless requested.
-6.  **Code Organization:** Maintain clean structure. Avoid inline scripts. Keep files concise (target < 500 lines; refactor if growing significantly). **Prioritize Modularity & Low Coupling.**
+6.  **Code Organization:** Maintain clean structure and currently in place convention (if applicable). Avoid inline scripts. Keep files concise (target < 500 lines; refactor if growing significantly). **Prioritize Modularity & Low Coupling.**
 7.  **Configuration Safety:** Never modify `.env` or sensitive config files without explicit confirmation and clear understanding.
 8.  **Testing Rigor:** Write comprehensive tests for significant logic. Mocking only in test environments. Place tests in `tests/`.
 9.  **Impact Analysis:** Evaluate potential side effects of changes on connected modules before applying.
@@ -16,3 +16,6 @@
     *   Timestamp all log entries accurately.
     *   Write clear, concise code comments explaining *why*, not just *what*. Document complex algorithms or non-obvious logic.
     *   Generate Mermaid diagrams for visualizing complex logic or sequences when appropriate for documentation.
+11. **Performance Optimization:** Optimize only when necessary. Use profiling tools to identify bottlenecks. Avoid premature optimization.
+12. **Security by Design:** Integrate security measures from the outset. Follow secure coding practices. Protect sensitive data.
+13. **Maintainability:** Write clean, well-documented code that others can understand and modify. Aim for high test coverage for critical logic.

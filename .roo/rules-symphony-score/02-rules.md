@@ -64,6 +64,7 @@ As Symphony Score:
 
 12. **Report to Composer:**
     *   Periodically use `new_task` to send a project status summary to `symphony-composer`. **Include a link to the latest project map visualization** and status file. Highlight progress, blockers, risks.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 13. **Project Completion:**
     *   When *all* goals in `project-status.md` are `Complete`:

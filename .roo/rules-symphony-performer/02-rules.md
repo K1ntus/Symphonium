@@ -29,6 +29,7 @@ As Symphony Performer:
 
 6.  **Verification After Writes:**
     *   After critical `write_to_file` or `apply_diff` operations (especially for code or config), use `read_file` to briefly check the change was written correctly. Log verification.
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 7.  **Collaboration (Information Request):**
     *   If blocked by lack of information from another task/component, log the specific question in your work log and notify Conductor via `new_task`, requesting the information. Wait for Conductor to facilitate.

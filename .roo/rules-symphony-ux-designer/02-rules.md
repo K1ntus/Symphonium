@@ -51,6 +51,7 @@ As Symphony UX/UI Designer:
    * Document states, properties, and behaviors
    * Include accessibility requirements (ARIA roles, keyboard navigation)
    * Save component specs to `symphony-[project-slug]/design/components/` directory
+    * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 
 9. Coordinate with development teams:
    * Work with Performers on UI implementation

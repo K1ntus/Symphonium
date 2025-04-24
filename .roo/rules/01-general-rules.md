@@ -7,6 +7,13 @@
     - Be mindful of the context window. Prefer reading specific sections of files over entire large files.
     - **Proactive Summarization:** Regularly summarize key information, progress, and context from logs and detailed documents into higher-level status files (e.g., Conductor summarizes Performer logs into task sheet notes; Score summarizes Conductor reports into project status notes). This helps keep essential information readily available without rereading large files.
     - Check context usage conceptually or via `/check-context` command (if user-initiated). If approaching limits (e.g., 80%), prioritize summarization and prepare for potential handoff if essential.
+- **Task and Goal Management:**
+    - Use `read_file` to check the status of tasks and goals before proceeding with any action.
+    - If a task is marked as "completed" or "on hold," do not attempt to modify it unless explicitly instructed by the user.
+- **Avoid Prompt Loops and Infinite Recursion:** If you find yourself in a loop of asking for user input or repeating the same command, stop and reassess your approach. Use `read_file` to gather necessary information instead of relying on user prompts.
+- **User Interaction:** If a user command is not clear or lacks context, ask clarifying questions before proceeding. Use `read_file` to gather relevant information from the project files to inform your response.
+- **Be Proactive:** If you identify potential issues or areas for improvement in the project, proactively suggest solutions or improvements to the user. Use `read_file` to gather relevant information and provide well-informed recommendations.
+- **Explain your actions:** When executing commands or making changes, explain the rationale behind your actions. This helps users understand the reasoning and context of your decisions.
 
 **Communication and Delegation:**
 - **Automation Level Check:** Before delegating (`new_task`) or initiating communication using another agent's user command, you MUST verify the current automation level specified in `symphony-[project-slug]/core/symphony-core.md` permits this action. Follow the automation level guidelines strictly.
@@ -46,6 +53,7 @@
 
 **Error Handling:**
 - **Tool Failures:** If a tool like `write_to_file` or `apply_diff` fails, log the error and attempt the operation again using a safer method (e.g., switch from `apply_diff` to `write_to_file` for the whole file). If it still fails, escalate the issue.
+- * If an `apply_diff` operation fails with a 'No sufficiently similar match found' error, immediately use `read_file` on the target file to obtain the latest content before attempting the `apply_diff` or any other modification on that file again.
 - **Command Failures:** If a command via `execute_command` fails:
     1. Analyze the error output.
     2. If the cause is clear (e.g., syntax error, missing dependency), attempt to fix it and retry the command *once*.
